@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipeItem = document.createElement("div")
     recipeItem.classList.add("col-12", "col-sm-6", "col-md-4", "recipe-item")
     recipeItem.innerHTML = `
-          <img src="${recipe.photoUrl || "default-image.jpg"}" alt="${recipe.title}">
+          <img src="${recipe.photoUrl}" alt="${recipe.title}">
           <h5 class="mt-2">${recipe.title}</h5>
           <div class="details" id="details-${index}">
             <h6>Ingredients:</h6>
