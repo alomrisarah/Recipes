@@ -1,15 +1,28 @@
-body{
+/* Base Styles */
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-        overflow-x: hidden;
-
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
 }
 
+#recipeGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Consistent gap for all screen sizes */
+    justify-content: center;
+    /* Center items across all screen sizes */
+    padding: 20px;
+    /* Added padding to prevent overflow */
+}
 
 #recipeGrid .recipe-item {
     text-align: center;
     cursor: pointer;
+    flex-basis: 100%;
+    /* Default for small screens */
 }
 
 #recipeGrid .recipe-item img {
@@ -17,17 +30,21 @@ body{
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #recipeGrid .recipe-item img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .details {
     display: none;
     margin-top: 15px;
     background-color: #f8f9fa;
+    padding: 10px;
+    /* Added padding to improve readability */
+    border-radius: 8px;
 }
 
 .details.active {
@@ -42,7 +59,7 @@ body{
 
 .details ul li {
     background-color: #f8f9fa;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     padding: 10px;
     border-radius: 5px;
     text-align: left;
@@ -56,6 +73,7 @@ body{
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -88,9 +106,119 @@ section {
     color: #ffffff;
 }
 
-/* Responsive  */
+/* Responsive Enhancements */
+
+/* For small screens (max-width: 576px) */
 @media (max-width: 576px) {
     section {
         padding: 40px 10px;
+    }
+
+    #recipeGrid {
+        gap: 10px;
+        /* Slightly reduce gap on small screens */
+        padding: 0 10px;
+        /* Reduce padding to prevent overflow */
+    }
+
+    #recipeGrid .recipe-item {
+        flex-basis: 100%;
+        /* Each item takes full width */
+    }
+
+    #recipeGrid .recipe-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    #feedback,
+    #ser,
+    #con {
+        padding: 20px 10px;
+    }
+}
+
+/* For medium screens (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    #recipeGrid {
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    #recipeGrid .recipe-item {
+        flex-basis: 48%;
+        /* Fit two items per row */
+        margin-bottom: 20px;
+    }
+
+    #recipeGrid .recipe-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h5 {
+        font-size: 1.125rem;
+    }
+}
+
+/* For larger screens (769px and above) */
+@media (min-width: 769px) {
+    #recipeGrid {
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    #recipeGrid .recipe-item {
+        flex-basis: 30%;
+        /* Fit three items per row */
+        margin-bottom: 30px;
+    }
+
+    #recipeGrid .recipe-item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.25rem;
     }
 }
