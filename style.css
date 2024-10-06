@@ -1,3 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        overflow-x: hidden;
+
+}
+
+
 #recipeGrid .recipe-item {
     text-align: center;
     cursor: pointer;
@@ -53,7 +62,6 @@
     background: #eee;
 }
 
-/* General Section Styles */
 section {
     padding: 60px 20px;
     border-bottom: 1px solid #ccc;
@@ -62,32 +70,25 @@ section {
 /* Feedback Section */
 #feedback {
     background-color: #f8f9fa;
-    /* Light background color */
 }
 
 /* Services Section */
 #ser {
     background-color: #343a40;
-    /* Dark background color */
     color: #ffffff;
-    /* White text color */
 }
 
 /* Contact Section */
 #con {
     background-color: #f8f9fa;
-    /* Light background color */
 }
 
-/* Another Section */
 #recipeContainer {
     background-color: #343a40;
-    /* Dark background color */
     color: #ffffff;
-    /* White text color */
 }
 
-/* Responsive adjustments */
+/* Responsive  */
 @media (max-width: 576px) {
     section {
         padding: 40px 10px;
