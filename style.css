@@ -1,0 +1,95 @@
+#recipeGrid .recipe-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+#recipeGrid .recipe-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+#recipeGrid .recipe-item img:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    display: none;
+    margin-top: 15px;
+    background-color: #f8f9fa;
+}
+
+.details.active {
+    display: block;
+}
+
+.details ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.details ul li {
+    background-color: #f8f9fa;
+    margin-bottom: 2px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    border-bottom: 2px solid white;
+}
+
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #eee;
+}
+
+/* General Section Styles */
+section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Feedback Section */
+#feedback {
+    background-color: #f8f9fa;
+    /* Light background color */
+}
+
+/* Services Section */
+#ser {
+    background-color: #343a40;
+    /* Dark background color */
+    color: #ffffff;
+    /* White text color */
+}
+
+/* Contact Section */
+#con {
+    background-color: #f8f9fa;
+    /* Light background color */
+}
+
+/* Another Section */
+#recipeContainer {
+    background-color: #343a40;
+    /* Dark background color */
+    color: #ffffff;
+    /* White text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    section {
+        padding: 40px 10px;
+    }
+}
