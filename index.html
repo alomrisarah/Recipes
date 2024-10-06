@@ -11,8 +11,8 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Brand</a>
+        <div class="container">
+            <a class="navbar-brand" href="#ser">Recipe Grid</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,6 +35,10 @@
             </div>
         </div>
     </nav>
+    <h1 class="text-center">Recipes</h1>
+    <div id="recipeGrid" class="row g-2">
+    
+    </div>
     <div class="container mt-5">
         <section id="feedback">
             <div class="container">
@@ -86,15 +90,10 @@
                         <label for="messageInput" class="form-label">Message</label>
                         <textarea class="form-control" id="messageInput" rows="3" placeholder="Your Message"></textarea>
                     </div>
-                        <button type="submit" class="btn btn-light">Submit</button>
+                    <button type="submit" class="btn btn-light">Send Message</button>
                 </form>
             </div>
         </section>
-
-        <h1 class="text-center">Recipes</h1>
-        <div id="recipeGrid" class="row g-4">
-
-        </div>
         <footer class="bg-dark text-white text-center flex-wrap py-4">
             <div class="container">
                 <p>&copy; 2024 Your Company Name. All rights reserved.</p>
