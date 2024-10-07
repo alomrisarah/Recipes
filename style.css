@@ -97,6 +97,59 @@ section {
 #ser {
     background-color: #343a40;
     color: #ffffff;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+#ser h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#ser p {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+    color: #dddddd;
+
+}
+
+#ser ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#ser ul li {
+    background-color: #2b2e33;
+    color: #dddddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#ser ul li::before {
+    content: '\2022';
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: 1em;
+}
+
+#ser p:last-child {
+    font-size: 1.125rem;
+    margin-top: 20px;
+    color: #dddddd;
+}
+
+#ser p a {
+    text-decoration: none;
+    color: #dddddd;
 }
 
 /* Contact Section */
@@ -154,6 +207,19 @@ section {
     #con {
         padding: 20px 10px;
     }
+
+    #ser h2 {
+        font-size: 2rem;
+    }
+
+    #ser p,
+    #ser ul li {
+        font-size: 1rem;
+    }
+
+    #ser ul li {
+        padding: 10px;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -170,6 +236,19 @@ section {
     #recipeGrid .recipe-item img {
         width: 120px;
         height: 120px;
+    }
+
+    #ser h2 {
+        font-size: 2rem;
+    }
+
+    #ser p,
+    #ser ul li {
+        font-size: 1rem;
+    }
+
+    #ser ul li {
+        padding: 10px;
     }
 
     .btn {
